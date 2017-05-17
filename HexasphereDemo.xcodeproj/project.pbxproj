@@ -14,6 +14,16 @@
 		D0D1A62A1ECC653200171E3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A6281ECC653200171E3B /* Main.storyboard */; };
 		D0D1A62C1ECC653200171E3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A62B1ECC653200171E3B /* Assets.xcassets */; };
 		D0D1A62F1ECC653200171E3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A62D1ECC653200171E3B /* LaunchScreen.storyboard */; };
+		D0D1A6451ECC657200171E3B /* Hexasphere.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6381ECC657200171E3B /* Hexasphere.m */; };
+		D0D1A6461ECC657200171E3B /* HexNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A63A1ECC657200171E3B /* HexNode.m */; };
+		D0D1A6471ECC657200171E3B /* HSFace.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A63C1ECC657200171E3B /* HSFace.m */; };
+		D0D1A6481ECC657200171E3B /* HSHexasphere.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A63E1ECC657200171E3B /* HSHexasphere.m */; };
+		D0D1A6491ECC657200171E3B /* HSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6401ECC657200171E3B /* HSPoint.m */; };
+		D0D1A64A1ECC657200171E3B /* HSTile.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6421ECC657200171E3B /* HSTile.m */; };
+		D0D1A64B1ECC657200171E3B /* UIImage+PixelData.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6441ECC657200171E3B /* UIImage+PixelData.m */; };
+		D0D1A64F1ECC697300171E3B /* equirectangle_projection.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A64D1ECC697300171E3B /* equirectangle_projection.png */; };
+		D0D1A6501ECC697300171E3B /* texturemap.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A64E1ECC697300171E3B /* texturemap.png */; };
+		D0D1A6531ECC6B3B00171E3B /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6521ECC6B3B00171E3B /* Utilities.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +38,24 @@
 		D0D1A62B1ECC653200171E3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D0D1A62E1ECC653200171E3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0D1A6301ECC653200171E3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0D1A6371ECC657200171E3B /* Hexasphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hexasphere.h; sourceTree = "<group>"; };
+		D0D1A6381ECC657200171E3B /* Hexasphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Hexasphere.m; sourceTree = "<group>"; };
+		D0D1A6391ECC657200171E3B /* HexNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexNode.h; sourceTree = "<group>"; };
+		D0D1A63A1ECC657200171E3B /* HexNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexNode.m; sourceTree = "<group>"; };
+		D0D1A63B1ECC657200171E3B /* HSFace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSFace.h; sourceTree = "<group>"; };
+		D0D1A63C1ECC657200171E3B /* HSFace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSFace.m; sourceTree = "<group>"; };
+		D0D1A63D1ECC657200171E3B /* HSHexasphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSHexasphere.h; sourceTree = "<group>"; };
+		D0D1A63E1ECC657200171E3B /* HSHexasphere.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSHexasphere.m; sourceTree = "<group>"; };
+		D0D1A63F1ECC657200171E3B /* HSPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSPoint.h; sourceTree = "<group>"; };
+		D0D1A6401ECC657200171E3B /* HSPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSPoint.m; sourceTree = "<group>"; };
+		D0D1A6411ECC657200171E3B /* HSTile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSTile.h; sourceTree = "<group>"; };
+		D0D1A6421ECC657200171E3B /* HSTile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSTile.m; sourceTree = "<group>"; };
+		D0D1A6431ECC657200171E3B /* UIImage+PixelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PixelData.h"; sourceTree = "<group>"; };
+		D0D1A6441ECC657200171E3B /* UIImage+PixelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PixelData.m"; sourceTree = "<group>"; };
+		D0D1A64D1ECC697300171E3B /* equirectangle_projection.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = equirectangle_projection.png; sourceTree = "<group>"; };
+		D0D1A64E1ECC697300171E3B /* texturemap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = texturemap.png; sourceTree = "<group>"; };
+		D0D1A6511ECC6B3B00171E3B /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		D0D1A6521ECC6B3B00171E3B /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +88,8 @@
 		D0D1A61C1ECC653200171E3B /* HexasphereDemo */ = {
 			isa = PBXGroup;
 			children = (
+				D0D1A64C1ECC697300171E3B /* Resources */,
+				D0D1A6361ECC657200171E3B /* Hexaspehere */,
 				D0D1A6201ECC653200171E3B /* AppDelegate.h */,
 				D0D1A6211ECC653200171E3B /* AppDelegate.m */,
 				D0D1A6231ECC653200171E3B /* art.scnassets */,
@@ -80,6 +110,46 @@
 				D0D1A61E1ECC653200171E3B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D0D1A6361ECC657200171E3B /* Hexaspehere */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1A6541ECC7FB600171E3B /* Hexasphere.objc */,
+				D0D1A6511ECC6B3B00171E3B /* Utilities.h */,
+				D0D1A6521ECC6B3B00171E3B /* Utilities.m */,
+				D0D1A6371ECC657200171E3B /* Hexasphere.h */,
+				D0D1A6381ECC657200171E3B /* Hexasphere.m */,
+				D0D1A6391ECC657200171E3B /* HexNode.h */,
+				D0D1A63A1ECC657200171E3B /* HexNode.m */,
+				D0D1A6431ECC657200171E3B /* UIImage+PixelData.h */,
+				D0D1A6441ECC657200171E3B /* UIImage+PixelData.m */,
+			);
+			path = Hexaspehere;
+			sourceTree = "<group>";
+		};
+		D0D1A64C1ECC697300171E3B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1A64D1ECC697300171E3B /* equirectangle_projection.png */,
+				D0D1A64E1ECC697300171E3B /* texturemap.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0D1A6541ECC7FB600171E3B /* Hexasphere.objc */ = {
+			isa = PBXGroup;
+			children = (
+				D0D1A63D1ECC657200171E3B /* HSHexasphere.h */,
+				D0D1A63E1ECC657200171E3B /* HSHexasphere.m */,
+				D0D1A63B1ECC657200171E3B /* HSFace.h */,
+				D0D1A63C1ECC657200171E3B /* HSFace.m */,
+				D0D1A63F1ECC657200171E3B /* HSPoint.h */,
+				D0D1A6401ECC657200171E3B /* HSPoint.m */,
+				D0D1A6411ECC657200171E3B /* HSTile.h */,
+				D0D1A6421ECC657200171E3B /* HSTile.m */,
+			);
+			name = Hexasphere.objc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +213,10 @@
 			files = (
 				D0D1A6241ECC653200171E3B /* art.scnassets in Resources */,
 				D0D1A62F1ECC653200171E3B /* LaunchScreen.storyboard in Resources */,
+				D0D1A6501ECC697300171E3B /* texturemap.png in Resources */,
 				D0D1A62C1ECC653200171E3B /* Assets.xcassets in Resources */,
 				D0D1A62A1ECC653200171E3B /* Main.storyboard in Resources */,
+				D0D1A64F1ECC697300171E3B /* equirectangle_projection.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,8 +227,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0D1A64B1ECC657200171E3B /* UIImage+PixelData.m in Sources */,
+				D0D1A6451ECC657200171E3B /* Hexasphere.m in Sources */,
+				D0D1A6491ECC657200171E3B /* HSPoint.m in Sources */,
+				D0D1A6481ECC657200171E3B /* HSHexasphere.m in Sources */,
+				D0D1A64A1ECC657200171E3B /* HSTile.m in Sources */,
 				D0D1A6221ECC653200171E3B /* AppDelegate.m in Sources */,
 				D0D1A6271ECC653200171E3B /* GameViewController.m in Sources */,
+				D0D1A6531ECC6B3B00171E3B /* Utilities.m in Sources */,
+				D0D1A6471ECC657200171E3B /* HSFace.m in Sources */,
+				D0D1A6461ECC657200171E3B /* HexNode.m in Sources */,
 				D0D1A61F1ECC653200171E3B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
