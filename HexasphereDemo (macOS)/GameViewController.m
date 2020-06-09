@@ -1,8 +1,8 @@
 //
 //  GameViewController.m
-//  HexasphereDemo
+//  HexasphereDemo (macOS)
 //
-//  Created by Peter Easdown on 17/5/17.
+//  Created by Peter Easdown on 8/6/20.
 //
 
 #import "GameViewController.h"
@@ -10,9 +10,8 @@
 
 @implementation GameViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
+- (void) viewWillAppear {
+    [super viewWillAppear];
 
     // create a new scene
     SCNScene *scene = [SCNScene scene];
@@ -50,7 +49,7 @@
 
     // configure the view
     scnView.backgroundColor = [UIColor blackColor];
-
+    
     // This does two things:
     // 1. It demonstrates how to change the color of a single tile, and
     // 2. It forces the node to update it's material at startup.  For some reason I haven't
@@ -59,30 +58,6 @@
     [earth updateTile:4 withColor:[UIColor redColor]];
     
     [earth runAction:[SCNAction repeatActionForever:[SCNAction rotateByX:0.0 y:M_PI * 2.0 z:0.0 duration:60.0]]];
-}
-
-- (BOOL)shouldAutorotate
-{
-    return YES;
-}
-
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
-
-- (UIInterfaceOrientationMask)supportedInterfaceOrientations
-{
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-        return UIInterfaceOrientationMaskAllButUpsideDown;
-    } else {
-        return UIInterfaceOrientationMaskAll;
-    }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Release any cached data, images, etc that aren't in use.
 }
 
 @end

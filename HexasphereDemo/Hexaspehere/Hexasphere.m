@@ -8,7 +8,10 @@
 #import "Hexasphere.h"
 #import "HSHexasphere.h"
 #import "Utilities.h"
+#import "MutableTileTexture.h"
+#if !TARGET_OS_OSX
 #import "UIImage+PixelData.h"
+#endif
 #import <GLKit/GLKit.h>
 #import "HexNode.h"
 
@@ -19,23 +22,41 @@
 @property (nonatomic) SCNVector3 *oneMeshNormals;
 @property (nonatomic) TextureCoord *oneMeshTextureCoordinates;
 @property (nonatomic, retain) SCNMaterial *oneMeshMaterial;
-@property (nonatomic, retain) UIImage *colorMapImage;
+@property (nonatomic) CGImageRef colorMapImage;
+@property (nonatomic, retain) MutableTileTexture *tileTexture;
 
 @end
 
-@implementation Hexasphere
+@implementation Hexasphere {
+#if TARGET_OS_OSX
+    NSBitmapImageRep* imageRep;
+#endif
+}
 
 /*!
  * Returns YES if the specified latitude/longitude is considered to be land in the speciied image.  This is signified by
  * a black pixel.
  */
-+ (BOOL) isLandInImage:(UIImage*)image atLat:(float)lat andLong:(float)lon {
+- (BOOL) isLandInImage:(UIImage*)image atLat:(float)lat andLong:(float)lon {
+#if TARGET_OS_OSX
+    if (imageRep == nil) {
+        imageRep = [[NSBitmapImageRep alloc] initWithData:[image TIFFRepresentation]];
+    }
+    
+    NSUInteger x = imageRep.pixelsWide * (lon + 180.0) / 360.0;
+    NSUInteger y = imageRep.pixelsHigh * (lat + 90.0) / 180.0;
+
+    NSColor* color = [imageRep colorAtX:x y:y];
+    
+    GLubyte pixelColor = (GLubyte)(color.redComponent * 255.0);
+#else
     NSUInteger x = image.size.width * (lon + 180.0) / 360.0;
     NSUInteger y = image.size.height * (lat + 90.0) / 180.0;
 
     GLubyte pixelColor = [image redColorAtPosition:CGPointMake(x, y)];
-    
-    return (pixelColor == 0.0);
+#endif
+
+    return (pixelColor == 0);
 }
 
 /*!
@@ -47,6 +68,10 @@
     self = [super init];
     
     if (self != nil) {
+#if TARGET_OS_OSX
+        imageRep = nil;
+#endif
+
         // create the initial hexasphere using internal structures; this object is the actual port of the original
         // Hexasphere.js code by Rob Scanlon.
         //
@@ -58,11 +83,11 @@
         // First off, iterate through the tiles and determine which are land.
         //
         UIImage *image = [UIImage imageNamed:@"equirectangle_projection.png"];
-        
+
         for (HSTile *tile in internalSphere.tiles) {
             HSLatLong latLon = [tile getLatLongForRadius:internalSphere.radius];
             
-            if ([Hexasphere isLandInImage:image atLat:latLon.lat andLong:latLon.lon] == YES) {
+            if ([self isLandInImage:image atLat:latLon.lat andLong:latLon.lon] == YES) {
                 tile.isLand = 1;
             } else {
                 tile.isLand = 0;
@@ -107,7 +132,7 @@
                 for (int i = 0; i < tile.boundaryLength; i++) {
                     self.oneMeshVertices[vertexIndex+i] = [tile boundaryPointAtIndex:i];
                     
-                    self.oneMeshTextureCoordinates[vertexIndex+i] = [UIImage textureCoordForTileID:tile.tileID normalised:YES];
+                    self.oneMeshTextureCoordinates[vertexIndex+i] = [MutableTileTexture textureCoordForTileID:tile.tileID normalised:YES];
                     
                     self.oneMeshNormals[normalIndex] =
                     [Hexasphere computeNormalFor:[tile boundaryPointAtIndex:0]
@@ -186,10 +211,11 @@
         // Now load the default texture (it must be a 1024x1024 PNG)  The size is referenced inside
         // UIImage.textureCoordForTileID:
         //
-        self.colorMapImage = [UIImage imageNamed:@"texturemap.png"];
+        self.tileTexture = [MutableTileTexture tileTextureWithImage:[UIImage imageNamed:@"texturemap.png"]];
+        self.colorMapImage = [self.tileTexture tileTextureImage];
 
         self.oneMeshMaterial = [SCNMaterial material];
-        self.oneMeshMaterial.diffuse.contents = self.colorMapImage;
+        self.oneMeshMaterial.diffuse.contents = (__bridge id _Nullable)(self.colorMapImage);
 
         self.oneMeshMaterial.doubleSided = YES;
         self.oneMeshMaterial.locksAmbientWithDiffuse = YES;
@@ -244,8 +270,9 @@
  * the SceneKit renderer thread.
  */
 - (void) updateTile:(TileID)tileID withColor:(UIColor*)color {
-    self.colorMapImage = [UIImage setPixelForTileID:tileID inImage:self.colorMapImage toColor:color];
-    self.oneMeshMaterial.diffuse.contents = self.colorMapImage;
+    [self.tileTexture setPixelForTileID:tileID toColor:color];
+    self.colorMapImage = [self.tileTexture tileTextureImage];
+    self.oneMeshMaterial.diffuse.contents = (__bridge id _Nullable)(self.colorMapImage);
 }
 
 @end

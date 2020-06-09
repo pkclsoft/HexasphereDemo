@@ -1,0 +1,51 @@
+//
+//  Prefix.pch
+//  LetItShine
+//
+//  Created by Peter Easdown on 3/08/2016.
+//
+
+#ifndef Prefix_h
+#define Prefix_h
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import <ModelIO/ModelIO.h>
+#import <SceneKit/SceneKit.h>
+#import <SceneKit/ModelIO.h>
+#import <SpriteKit/SpriteKit.h>
+#import <GLKit/GLKit.h>
+#import <Cocoa/Cocoa.h>
+#import <AppKit/AppKit.h>
+#import <CloudKit/CloudKit.h>
+#import <CoreGraphics/CoreGraphics.h>
+#import <CoreGraphics/CGGeometry.h>
+#import <UserNotifications/UserNotifications.h>
+
+#endif
+
+#define UIView NSView
+#define UIViewController NSViewController
+#define UIColor NSColor
+#define UIFont NSFont
+#define UIImage NSImage
+#define UIGestureRecognizer NSGestureRecognizer
+#define UIGestureRecognizerDelegate NSGestureRecognizerDelegate
+#define UIPanGestureRecognizer NSPanGestureRecognizer
+#define UITapGestureRecognizer NSClickGestureRecognizer
+#define UIPinchGestureRecognizer NSMagnificationGestureRecognizer
+#define UIGestureRecognizerStateBegan NSGestureRecognizerStateBegan
+#define UIGestureRecognizerStateChanged NSGestureRecognizerStateChanged
+#define UIGestureRecognizerStateCancelled NSGestureRecognizerStateCancelled
+#define UIGestureRecognizerStateEnded NSGestureRecognizerStateEnded
+#define UIGestureRecognizerStateFailed NSGestureRecognizerStateFailed
+#define UIGestureRecognizerStatePossible NSGestureRecognizerStatePossible
+#define UITextFieldDelegate NSTextFieldDelegate
+#define UITouch NSTouch
+#define UITextField NSTextField
+#define UITextFieldTextDidChangeNotification NSControlTextDidChangeNotification
+#define UIFontDescriptorTraitBold NSFontDescriptorTraitBold
+#define UIFontDescriptorTraitItalic NSFontDescriptorTraitItalic
+
+#endif /* Prefix_h */

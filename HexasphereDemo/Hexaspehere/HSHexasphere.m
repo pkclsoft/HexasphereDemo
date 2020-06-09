@@ -68,6 +68,10 @@
         [corners removeAllObjects];
         corners = nil;
         
+#ifdef DEBUG
+        NSTimeInterval startBuild = [NSDate timeIntervalSinceReferenceDate];
+        BOOL faceComputed = NO;
+#endif
         NSMutableArray *newFaces = [NSMutableArray array];
         
         WeakSelf
@@ -81,6 +85,9 @@
             NSArray<HSPoint*> *left = [face.points[0] subdividePoint:face.points[1] withCount:numDivisions andPointChecker:strongSelf];
             NSArray<HSPoint*> *right = [face.points[0] subdividePoint:face.points[2] withCount:numDivisions andPointChecker:strongSelf];
             
+#ifdef DEBUG
+            NSTimeInterval startBuildOfFace = [NSDate timeIntervalSinceReferenceDate];
+#endif
             for (NSUInteger i = 1; i <= numDivisions; i++) {
                 prev = bottom;
                 bottom = [left[i] subdividePoint:right[i] withCount:i andPointChecker:strongSelf];
@@ -93,6 +100,13 @@
                     }
                 }
             }
+#ifdef DEBUG
+            if (faceComputed == NO) {
+                NSTimeInterval endBuildOfFace = [NSDate timeIntervalSinceReferenceDate];
+                NSLog(@"HSHexasphere computation time taken: %fl", (endBuildOfFace - startBuildOfFace));
+                faceComputed = YES;
+            }
+#endif
         }
         
         for (HSPoint *point in points) {
@@ -121,6 +135,11 @@
         
         [faces removeAllObjects];
         faces = nil;
+
+#ifdef DEBUG
+        NSTimeInterval endBuild = [NSDate timeIntervalSinceReferenceDate];
+        NSLog(@"HSHexasphere computation time taken: %fl", (endBuild - startBuild));
+#endif
     }
     
     return self;

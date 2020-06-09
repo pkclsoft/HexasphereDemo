@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0103FFE248E7AF000B97CFF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0103FFD248E7AF000B97CFF /* AppDelegate.m */; };
+		D0104001248E7AF000B97CFF /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0104000248E7AF000B97CFF /* GameViewController.m */; };
+		D0104003248E7AF000B97CFF /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D0104002248E7AF000B97CFF /* art.scnassets */; };
+		D0104005248E7AF100B97CFF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0104004248E7AF100B97CFF /* Assets.xcassets */; };
+		D0104008248E7AF100B97CFF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0104006248E7AF100B97CFF /* Main.storyboard */; };
+		D010400B248E7AF100B97CFF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D010400A248E7AF100B97CFF /* main.m */; };
+		D0104010248E7B7600B97CFF /* HSHexasphere.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A63E1ECC657200171E3B /* HSHexasphere.m */; };
+		D0104011248E7B7600B97CFF /* HSFace.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A63C1ECC657200171E3B /* HSFace.m */; };
+		D0104012248E7B7600B97CFF /* HSPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6401ECC657200171E3B /* HSPoint.m */; };
+		D0104013248E7B7600B97CFF /* HSTile.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6421ECC657200171E3B /* HSTile.m */; };
+		D0104014248E7B7F00B97CFF /* equirectangle_projection.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A64D1ECC697300171E3B /* equirectangle_projection.png */; };
+		D0104015248E7B7F00B97CFF /* texturemap.png in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A64E1ECC697300171E3B /* texturemap.png */; };
+		D0104016248E7B8600B97CFF /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6521ECC6B3B00171E3B /* Utilities.m */; };
+		D0104017248E7B8600B97CFF /* Hexasphere.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6381ECC657200171E3B /* Hexasphere.m */; };
+		D0104018248E7B8600B97CFF /* HexNode.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A63A1ECC657200171E3B /* HexNode.m */; };
+		D05854E5248F3277007A5059 /* MutableTileTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = D05854E3248F3277007A5059 /* MutableTileTexture.m */; };
+		D05854E6248F3277007A5059 /* MutableTileTexture.m in Sources */ = {isa = PBXBuildFile; fileRef = D05854E3248F3277007A5059 /* MutableTileTexture.m */; };
 		D0D1A61F1ECC653200171E3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A61E1ECC653200171E3B /* main.m */; };
 		D0D1A6221ECC653200171E3B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0D1A6211ECC653200171E3B /* AppDelegate.m */; };
 		D0D1A6241ECC653200171E3B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D0D1A6231ECC653200171E3B /* art.scnassets */; };
@@ -27,6 +44,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0103FFA248E7AF000B97CFF /* HexasphereDemo (macOS).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HexasphereDemo (macOS).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0103FFC248E7AF000B97CFF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D0103FFD248E7AF000B97CFF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D0103FFF248E7AF000B97CFF /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		D0104000248E7AF000B97CFF /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
+		D0104002248E7AF000B97CFF /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		D0104004248E7AF100B97CFF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0104007248E7AF100B97CFF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D0104009248E7AF100B97CFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D010400A248E7AF100B97CFF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D010400C248E7AF100B97CFF /* HexasphereDemo__macOS_.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HexasphereDemo__macOS_.entitlements; sourceTree = "<group>"; };
+		D05854E3248F3277007A5059 /* MutableTileTexture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutableTileTexture.m; sourceTree = "<group>"; };
+		D05854E4248F3277007A5059 /* MutableTileTexture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutableTileTexture.h; sourceTree = "<group>"; };
+		D05854E7248F3349007A5059 /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		D0D1A61A1ECC653200171E3B /* HexasphereDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexasphereDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D1A61E1ECC653200171E3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0D1A6201ECC653200171E3B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,6 +90,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D0103FF7248E7AF000B97CFF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0D1A6171ECC653200171E3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -69,10 +107,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0103FFB248E7AF000B97CFF /* HexasphereDemo (macOS) */ = {
+			isa = PBXGroup;
+			children = (
+				D05854E7248F3349007A5059 /* Prefix.pch */,
+				D0103FFC248E7AF000B97CFF /* AppDelegate.h */,
+				D0103FFD248E7AF000B97CFF /* AppDelegate.m */,
+				D0103FFF248E7AF000B97CFF /* GameViewController.h */,
+				D0104000248E7AF000B97CFF /* GameViewController.m */,
+				D0104002248E7AF000B97CFF /* art.scnassets */,
+				D0104004248E7AF100B97CFF /* Assets.xcassets */,
+				D0104006248E7AF100B97CFF /* Main.storyboard */,
+				D0104009248E7AF100B97CFF /* Info.plist */,
+				D010400A248E7AF100B97CFF /* main.m */,
+				D010400C248E7AF100B97CFF /* HexasphereDemo__macOS_.entitlements */,
+			);
+			path = "HexasphereDemo (macOS)";
+			sourceTree = "<group>";
+		};
 		D0D1A6111ECC653200171E3B = {
 			isa = PBXGroup;
 			children = (
 				D0D1A61C1ECC653200171E3B /* HexasphereDemo */,
+				D0103FFB248E7AF000B97CFF /* HexasphereDemo (macOS) */,
 				D0D1A61B1ECC653200171E3B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				D0D1A61A1ECC653200171E3B /* HexasphereDemo.app */,
+				D0103FFA248E7AF000B97CFF /* HexasphereDemo (macOS).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +182,8 @@
 				D0D1A63A1ECC657200171E3B /* HexNode.m */,
 				D0D1A6431ECC657200171E3B /* UIImage+PixelData.h */,
 				D0D1A6441ECC657200171E3B /* UIImage+PixelData.m */,
+				D05854E4248F3277007A5059 /* MutableTileTexture.h */,
+				D05854E3248F3277007A5059 /* MutableTileTexture.m */,
 			);
 			path = Hexaspehere;
 			sourceTree = "<group>";
@@ -155,6 +215,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D0103FF9248E7AF000B97CFF /* HexasphereDemo (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D010400F248E7AF100B97CFF /* Build configuration list for PBXNativeTarget "HexasphereDemo (macOS)" */;
+			buildPhases = (
+				D0103FF6248E7AF000B97CFF /* Sources */,
+				D0103FF7248E7AF000B97CFF /* Frameworks */,
+				D0103FF8248E7AF000B97CFF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HexasphereDemo (macOS)";
+			productName = "HexasphereDemo (macOS)";
+			productReference = D0103FFA248E7AF000B97CFF /* HexasphereDemo (macOS).app */;
+			productType = "com.apple.product-type.application";
+		};
 		D0D1A6191ECC653200171E3B /* HexasphereDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0D1A6331ECC653200171E3B /* Build configuration list for PBXNativeTarget "HexasphereDemo" */;
@@ -178,9 +255,14 @@
 		D0D1A6121ECC653200171E3B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1150;
 				ORGANIZATIONNAME = PKCLsoft;
 				TargetAttributes = {
+					D0103FF9248E7AF000B97CFF = {
+						CreatedOnToolsVersion = 11.5;
+						DevelopmentTeam = YTQG85D588;
+						ProvisioningStyle = Automatic;
+					};
 					D0D1A6191ECC653200171E3B = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = YTQG85D588;
@@ -190,7 +272,7 @@
 			};
 			buildConfigurationList = D0D1A6151ECC653200171E3B /* Build configuration list for PBXProject "HexasphereDemo" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -202,11 +284,24 @@
 			projectRoot = "";
 			targets = (
 				D0D1A6191ECC653200171E3B /* HexasphereDemo */,
+				D0103FF9248E7AF000B97CFF /* HexasphereDemo (macOS) */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D0103FF8248E7AF000B97CFF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0104014248E7B7F00B97CFF /* equirectangle_projection.png in Resources */,
+				D0104015248E7B7F00B97CFF /* texturemap.png in Resources */,
+				D0104008248E7AF100B97CFF /* Main.storyboard in Resources */,
+				D0104005248E7AF100B97CFF /* Assets.xcassets in Resources */,
+				D0104003248E7AF000B97CFF /* art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0D1A6181ECC653200171E3B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -223,10 +318,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D0103FF6248E7AF000B97CFF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0104001248E7AF000B97CFF /* GameViewController.m in Sources */,
+				D0104010248E7B7600B97CFF /* HSHexasphere.m in Sources */,
+				D0104016248E7B8600B97CFF /* Utilities.m in Sources */,
+				D0104018248E7B8600B97CFF /* HexNode.m in Sources */,
+				D010400B248E7AF100B97CFF /* main.m in Sources */,
+				D0104012248E7B7600B97CFF /* HSPoint.m in Sources */,
+				D05854E6248F3277007A5059 /* MutableTileTexture.m in Sources */,
+				D0104017248E7B8600B97CFF /* Hexasphere.m in Sources */,
+				D0104011248E7B7600B97CFF /* HSFace.m in Sources */,
+				D0104013248E7B7600B97CFF /* HSTile.m in Sources */,
+				D0103FFE248E7AF000B97CFF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D0D1A6161ECC653200171E3B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D05854E5248F3277007A5059 /* MutableTileTexture.m in Sources */,
 				D0D1A64B1ECC657200171E3B /* UIImage+PixelData.m in Sources */,
 				D0D1A6451ECC657200171E3B /* Hexasphere.m in Sources */,
 				D0D1A6491ECC657200171E3B /* HSPoint.m in Sources */,
@@ -244,6 +358,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D0104006248E7AF100B97CFF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0104007248E7AF100B97CFF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		D0D1A6281ECC653200171E3B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -263,25 +385,101 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D010400D248E7AF100B97CFF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "HexasphereDemo (macOS)/HexasphereDemo__macOS_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YTQG85D588;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREFIX_HEADER = "HexasphereDemo (macOS)/Prefix.pch";
+				INFOPLIST_FILE = "HexasphereDemo (macOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pkclsoft.HexasphereDemo--macOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D010400E248E7AF100B97CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = "HexasphereDemo (macOS)/HexasphereDemo__macOS_.entitlements";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = YTQG85D588;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_PREFIX_HEADER = "HexasphereDemo (macOS)/Prefix.pch";
+				INFOPLIST_FILE = "HexasphereDemo (macOS)/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pkclsoft.HexasphereDemo--macOS-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		D0D1A6311ECC653200171E3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -316,21 +514,30 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -382,6 +589,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D010400F248E7AF100B97CFF /* Build configuration list for PBXNativeTarget "HexasphereDemo (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D010400D248E7AF100B97CFF /* Debug */,
+				D010400E248E7AF100B97CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		D0D1A6151ECC653200171E3B /* Build configuration list for PBXProject "HexasphereDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -398,6 +614,7 @@
 				D0D1A6351ECC653200171E3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
